@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  max-width: 100vw;
+  @include mq('sp') {
+    height: 65px;
+  }
+  &__heading {
+    margin: 0.2rem 1.2rem 0.2rem 0.2rem;
+    padding: 0;
+    font-size: 0;
+  }
+  &__link {
+    display: block;
+    img {
+      width: 200px;
+      height: 40px;
+      @include mq('sp') {
+        width: 140px;
+        height: 27px;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq('tab') {
+      height: 100vh;
+      margin-left: auto;
+      padding: 0.8rem 0.15rem;
+      flex-direction: column;
+    }
+  }
+  &__item {
+    margin-right: 0.3rem;
+    @include mq('tab') {
+      margin: 0;
+      width: 100%;
+      border-top: 1px solid #e6e5e5;
+      padding: 0.2rem;
+    }
+    a {
+      color: #fff;
+      font-weight: 800;
+      @include mq('tab') {
+        color: #000;
+        display: block;
+      }
+    }
+    &:nth-of-type(4) {
+      @include mq('tab') {
+        border-bottom: 1px solid #e6e5e5;
+      }
+    }
+    &--sp {
+      display: none;
+      @include mq('tab') {
+        display: block;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 0.25rem 0;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 0.3rem;
+      }
+      @include mq('sp') {
+        margin-top: 0.6rem;
+      }
+      &:hover {
+        @include mq('tab') {
+          transition: .3s;
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__btn {
+    @extend %header-btn;
+    @include mq('tab') {
+      display: none;
+    }
+  }
+}
+
+/* hamburger btn --------------------------------------*/
+.js-button {
+  display: none;
+  @include mq('tab') {
+    display: inline-block;
+    text-decoration: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.js-hamburger {
+  @include mq('tab') {
+    position: relative;
+    top: 0px;
+    right: 20px;
+    z-index: 25;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    outline: none;
+    transition: all .3s ease-in-out;
+  }
+  &:hover,
+  &:focus {  
+    @include mq('tab') {
+      box-shadow: 0 0 .5rem rgba(161, 161, 161, 0.5);
+    }
+  }
+}
+
+.js-hamburger__line {
+  @include mq('tab') {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    transition: inherit;
+  }
+  &::before,
+  &::after {
+    @include mq('tab') {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      content: '';
+      transition: inherit;
+    }
+  }
+  &::before {
+    @include mq('tab') {
+      top: -5px;
+    }
+  }
+  &::after {
+    @include mq('tab') {
+      top: 5px;
+    }
+  }
+}
+
+.js-hamburger[aria-expanded="true"] {
+  @include mq('tab') {
+    border: 1px solid #000;
+  }
+}
+
+.js-hamburger[aria-expanded="true"] .js-hamburger__line {
+    @include mq('tab') {
+    background-color: transparent;
+    &::before,
+    &::after {
+      top: 0;
+      border: 1px solid #000;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/*hamburger background */
+.hamburger-bg {
+  @include mq('tab') {
+    position: fixed;
+    z-index: 15;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgba(30,30,30,0.9);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.is-drawerActive {
+  .sp-header__menu {
+    @include mq('tab') {
+      transform: translateX(0px);
+      transition: 0.3s;
+    }
+  }
+  .hamburger-bg {
+    @include mq('tab') {
+      visibility: visible;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
+}
+
+/* if the hamburger btn is open */
+.sp-header__menu {
+  @include mq('tab') {
+    position: fixed;
+    z-index: 20;
+    width: 500px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: 100vh;
+    transform: translateX(500px);
+    transition: 0.3s;
+    background-color: #f7f5f5;
+  }
+  @include mq('sp') {
+    transform: translateX(280px);
+    width: 280px;
+  }
+}
+
+/* fixed header --------------------------------------*/
+.header.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.header.fixed .header__item a {
+  color:#000;
+}
+
+/* fixed + the hamberger btn is close */
+.header.fixed .js-hamburger {
+  border: 1px solid #000;
+}
+
+.header.fixed .js-hamburger__line {
+  background-color:  #000;
+  &::before,
+  &::after {
+    background-color:  #000;
+  }
+}
+
+/* fixed & the hamberger btn is open */
+.header.fixed .js-hamburger[aria-expanded="true"] .js-hamburger__line {
+  background-color: transparent;
+}
+

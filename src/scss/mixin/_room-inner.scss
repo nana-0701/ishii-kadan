@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@mixin room-inner($mar-l: 0.8rem, $mar-r: 0) {
+  font-weight: 500;
+  margin-left: $mar-l;
+  margin-right: $mar-r;
+}

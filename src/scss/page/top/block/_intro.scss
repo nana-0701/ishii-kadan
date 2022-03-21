@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.intro{
+  width: 100%;
+  height: 681px;
+  background-image: url("../../img/bg.jpg");
+  margin-bottom: 1.06rem;
+  @include mq('sp') {
+    height: auto;
+  }
+  &__wrapper {
+    max-width: $inner-width;
+    margin: 0 auto;
+    writing-mode: vertical-rl;
+    font-weight: 500;
+    width: 100vw;
+    @include mq('tab') {
+      max-width: 768px;
+    }
+    @include mq('sp') {
+      writing-mode: horizontal-tb;
+      overflow: hidden;
+      padding: 0.8rem 0.3rem;
+    }
+  }
+  &__heading {
+    font-size: 0.28rem;
+    margin: 0.64rem 1.01rem 0 1.18rem;
+    letter-spacing: 0.5em;
+    @include mq('tab') {
+      margin:0.64rem 0.3rem 0 0.7rem;
+    }
+    @include mq('sp') {
+      text-align: center;
+      font-size: 0.4rem;
+      margin: 0;
+    }
+    span {
+      display: inline-block;
+      margin: 0.85rem 0.33rem 0 0;
+      @include mq('tab') {
+        margin-right: 0.2rem;
+      }
+      @include mq('sp') {
+        margin: 0;
+      }  
+    }
+  }
+  &__text {
+    margin: 1.49rem 0 0 1.18rem;
+    line-height: 2.4;
+    text-orientation: upright;
+    letter-spacing: 0.4em;
+    @include mq('tab') {
+      margin-left: 0.6rem;
+    }
+    @include mq('sp') {
+      margin: 0.4rem 0 0 0;
+      letter-spacing: 0.2em;
+      line-height: 1.8;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      font-weight: normal;
+    }
+    &--br {
+      @include mq('sp') {
+        display: none;
+      }
+    }
+  }
+  &__name {
+    margin-left: 2.2rem;
+    text-align: right;
+    letter-spacing: 0.4em;
+    @include mq('tab') {
+      margin-left: 0.3rem;
+    }
+    @include mq('sp') {
+      margin: 0.4rem 0 0 0;
+    }
+  }
+}
+
+

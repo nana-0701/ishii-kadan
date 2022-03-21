@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+.footer {
+  background-image: url("../img/bg3.jpg");
+  padding-top: 0.64rem;
+  &__wrapper {
+    margin: 0 auto;
+    font-weight: 500;
+  }
+  &__nav {
+    text-align: center;
+  }
+  &__list {
+    writing-mode: vertical-rl;
+    text-align: left;
+    display: inline-block;
+  }
+  &__item {
+    letter-spacing: 0.6em;
+    a {
+      font-size: 0.18rem;
+      color: #000;
+      @include mq('sp') {
+        font-size: 0.32rem;
+      }
+    }
+    &:nth-child(2) {
+      margin: 0 0.34rem;
+    }
+  }
+  &__logo {
+    width: 145px;
+    height: 92px;
+    margin: 0.94rem auto 0.72rem;
+    @include mq('sp') {
+      width: 105px;
+      height: 65px;
+      margin-top: 0.72rem;
+    }
+  }
+  &__contact {
+    font-style: normal;
+    text-align: center;
+  }
+  &__address {
+    margin: 0 0 0.23rem;
+    > span {
+      margin-right: 0.21rem;
+    }
+  }
+  &__tel {
+    margin: 0 0 0.61rem;
+    > span {
+      margin-right: 0.2rem;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.12rem;
+    @include mq('sp') {
+      height: 40px;
+      line-height: 40px;
+      font-size: 0.28rem;
+    }
+  }
+}

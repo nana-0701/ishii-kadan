@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@mixin room-innerBefore {
+  content: '';
+  background-image: url("../../img/bg.jpg");
+  position: absolute;
+  width: 69%;
+  height: 381px;
+  z-index: -1;
+  top: 57px;
+  @content;
+}

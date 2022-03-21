@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+//common for subpages
+.breadcrumbs {
+  max-width: $inner-width;
+  margin: 0.36rem auto 0.98rem;
+  @include mq('tab') {
+    padding-left: 0.3rem;
+  }
+  &__item {
+    display: inline-block;
+    font-weight: 500;
+    &::after {
+      content: '>';
+      display: inline-block;
+      padding-left: 0.05rem;
+      color: #000;
+    }
+    &:last-of-type {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+%header-btn {
+  display: block;
+  margin: 0.13rem 0.2rem 0.13rem auto;
+  width: 170px;
+  height: 54px;
+  line-height: 54px;
+  background-color: #978F10;
+  padding-left: 0.69rem;
+  color: #fff;
+  background-image: url("../../img/calender.png");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: 37px 16px;
+  cursor: pointer;
+}

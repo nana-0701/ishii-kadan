@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+//common for subpages
+.subvisual {
+  position: relative;
+  padding-top: 80px;
+  @include mq('sp') {
+    padding-top: 65px;
+  }
+  &__img {
+    width: 100%;
+    height: 500px;
+    @include mq('sp') {
+      height: auto;
+      max-height: 180px;
+    }
+  }
+  &__heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding-top: 80px;
+    color: #fff;
+    font-size: 0.34rem;
+    font-weight: 800;
+    @include mq('sp') {
+      font-size: 0.44rem;
+      padding-top: 65px;
+    }
+  }
+}

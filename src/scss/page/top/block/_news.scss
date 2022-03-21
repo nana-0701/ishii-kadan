@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+.news {
+  &__wrapper {
+    max-width: $inner-width;
+    margin: 0 auto;
+    width: 100%;
+    @include mq('tab') {
+      width: 98%;
+    }
+  }
+  &__logo {
+    @extend %heading-logo;
+  }
+  &__heading {
+    @extend %heading;
+    margin-bottom: 0.46rem;
+  }
+}
+
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__box {
+    max-width: 570px;
+    width: 48%;
+    background-color: #F6F6F6;
+    margin-bottom: 0.2rem;
+    padding: 0.15rem 0 0.15rem 0.1rem;
+    @include mq('tab') {
+      padding: 0.1rem;
+    }
+    @include mq('sp') {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    &:hover {
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+  }
+  &__inner {
+    display: flex;
+  }
+  &__pic {
+    max-width: 103px;
+    height: 100px;
+    margin-right: 0.3rem;
+    width: 100%;
+    img {
+      min-height: 100%;
+    }
+  }
+  &__text {
+    color: #000;
+    line-height: 2;
+    font-weight: 500;
+    @include mq('tab') {
+      line-height: 1.6;
+    }
+  }
+  &__date {
+    font-size: 0.14rem;
+    margin: 0;
+    @include mq('sp') {
+      font-size: 0.24rem;
+    }
+  }
+  &__title {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    @include mq('sp') {
+      font-size: 0.28rem;
+    }
+    br {
+      @include mq('tab') {
+        display: none;
+      }
+    }
+  }
+}
+
+/* tab ---------------------------------------------*/
+.tab {
+  margin: 0 auto;
+  text-align: center;
+  &__item {
+    display: inline-block;
+    &:nth-child(1) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.tab__trigger {
+  cursor: pointer;
+}
+
+.tab__trigger.is-active {
+  text-decoration: underline;
+}
+
+/* tab contents */
+.tab-content__item {
+  display: none;
+  margin: 0.49rem 0 0.6rem;
+}
+
+.tab-content__item.is-active {
+  display: block;
+  animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+

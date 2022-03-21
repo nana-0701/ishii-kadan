@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@mixin room-box($mar-b) {
+  display: flex;
+  position: relative;
+  margin-bottom: $mar-b;
+}

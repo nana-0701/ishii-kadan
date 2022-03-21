@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.detail {
+  max-width: $inner-width;
+  margin: 3.21rem auto 0.96rem;
+  border-top: 1px solid #E7E7E7;;
+  border-bottom: 1px solid #E7E7E7;
+  font-weight: 500;
+  @include mq('tab') {
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    padding: 0 0.2rem;
+  }
+  &__heading {
+    margin: 0.95rem 0 0.51rem;
+    text-align: center;
+    font-size: 0.26rem;
+    @include mq('sp') {
+      font-size: 0.4rem;
+      margin-top: 0.5rem;
+    }
+  }
+  &__def {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #E7E7E7;
+    max-width: 880px;
+    margin: 0 auto 0.74rem;
+    @include mq('sp') {
+      display: block;
+    }
+    &--title,
+    &--data {
+      border-top: 1px solid #E7E7E7;
+      padding: 0.17rem 0;
+      font-size: 0.15rem;
+      @include mq('sp') {
+        font-size: 0.28rem;
+      }
+    }
+    &--title{
+      width: 19%;
+      @include mq('sp') {
+        width: 100%;
+      }
+    }
+    &--data {
+      width: 81%;
+      @include mq('sp') {
+        border: none;
+        width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+      br {
+        @include mq('tab') {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+//mixin
+@import '../../mixin/mq';
+
+//setting
+@import '../../setting/config';
+
+//placeholder
+@import '../../placeholder/heading-logo';
+@import '../../placeholder/heading';
+@import '../../placeholder/header-btn';
+
+//block
+@import 'block/**';
+
+

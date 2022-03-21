@@ -1,0 +1,533 @@
+@charset "UTF-8";
+html {
+  /* 1rem = 100px */
+  font-size: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    /*1rem = 50px */
+    font-size: 50px;
+  }
+}
+
+body {
+  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, "Noto Serif JP", serif;
+  font-size: 0.16rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    /* font size 14px (50px * 0.28rem = 14px) */
+    font-size: 0.28rem;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0.67em 0;
+}
+
+h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  -webkit-transition: .3s;
+  opacity: 0.6;
+  transition: .3s;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  -o-object-fit: cover;
+  border-style: none;
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+ul, li, dl, dt, dd {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+
+ol {
+  padding: 0;
+}
+
+.footer {
+  background-image: url("../img/bg3.jpg");
+  padding-top: 0.64rem;
+}
+
+.footer__wrapper {
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.footer__nav {
+  text-align: center;
+}
+
+.footer__list {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  display: inline-block;
+  text-align: left;
+  writing-mode: vertical-rl;
+}
+
+.footer__item {
+  letter-spacing: 0.6em;
+}
+
+.footer__item a {
+  color: #000;
+  font-size: 0.18rem;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__item a {
+    font-size: 0.32rem;
+  }
+}
+
+.footer__item:nth-child(2) {
+  margin: 0 0.34rem;
+}
+
+.footer__logo {
+  height: 92px;
+  margin: 0.94rem auto 0.72rem;
+  width: 145px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__logo {
+    height: 65px;
+    margin-top: 0.72rem;
+    width: 105px;
+  }
+}
+
+.footer__contact {
+  font-style: normal;
+  text-align: center;
+}
+
+.footer__address {
+  margin: 0 0 0.23rem;
+}
+
+.footer__address > span {
+  margin-right: 0.21rem;
+}
+
+.footer__tel {
+  margin: 0 0 0.61rem;
+}
+
+.footer__tel > span {
+  margin-right: 0.2rem;
+}
+
+.footer__copyright {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.12rem;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__copyright {
+    font-size: 0.28rem;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+.modal {
+  -webkit-transition: .4s;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: .4s;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 20;
+}
+
+.modal__bg {
+  background-color: rgba(30, 30, 30, 0.9);
+  height: 100vh;
+  width: 100vw;
+  z-index: 35;
+}
+
+.modal__wrapper {
+  -webkit-transform: translate(-50%, -50%);
+  background-color: #fff;
+  left: 50%;
+  padding: 0.29rem 0.6rem 0.9rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 550px;
+  z-index: 40;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__wrapper {
+    width: 90%;
+  }
+}
+
+.modal__heading {
+  border-bottom: 1px solid #707070;
+  font-size: 0.2rem;
+  font-weight: 500;
+  padding-bottom: 0.295rem;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__heading {
+    font-size: 0.36rem;
+  }
+}
+
+.modal__label {
+  display: block;
+  font-weight: 500;
+  margin: 0.14rem 0;
+}
+
+.modal__label--first {
+  display: block;
+  font-weight: 500;
+  margin: 0.355rem 0 0.14rem;
+}
+
+.modal__input {
+  border: 1px solid #E7E7E7;
+  display: block;
+  height: 32px;
+  width: 100%;
+}
+
+.modal__input::-webkit-input-placeholder {
+  color: #797878;
+  font-size: 0.14rem;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__input::-webkit-input-placeholder {
+    font-size: 0.28rem;
+  }
+}
+
+.modal__input::-moz-placeholder {
+  color: #797878;
+  font-size: 0.14rem;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__input::-moz-placeholder {
+    font-size: 0.28rem;
+  }
+}
+
+.modal__input:-ms-input-placeholder {
+  color: #797878;
+  font-size: 0.14rem;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__input:-ms-input-placeholder {
+    font-size: 0.28rem;
+  }
+}
+
+.modal__input::-ms-input-placeholder {
+  color: #797878;
+  font-size: 0.14rem;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__input::-ms-input-placeholder {
+    font-size: 0.28rem;
+  }
+}
+
+.modal__input::placeholder {
+  color: #797878;
+  font-size: 0.14rem;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__input::placeholder {
+    font-size: 0.28rem;
+  }
+}
+
+.modal__select {
+  border: 1px solid #E7E7E7;
+  color: #000;
+  cursor: pointer;
+  display: block;
+  font-size: 0.14rem;
+  height: 32px;
+  width: 100%;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .modal__select {
+    font-size: 0.28rem;
+  }
+}
+
+.modal__btn {
+  background-color: #fff;
+  border: 1px solid #707070;
+  display: block;
+  font-weight: 500;
+  height: 42px;
+  line-height: 42px;
+  margin: 0.64rem auto 0;
+  width: 198px;
+  padding: 0;
+}
+
+.modal__btn:hover {
+  -webkit-transition: 0.5s;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.modal__close {
+  cursor: pointer;
+  height: 18px;
+  position: absolute;
+  right: 0.22rem;
+  top: 0.2rem;
+  width: 18px;
+}
+
+/* show modal */
+.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* color for first option  */
+.is-empty {
+  color: #797878;
+}

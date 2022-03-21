@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+.modal{
+  visibility: hidden;
+  opacity : 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: .4s;
+  &__bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(30,30,30,0.9);
+    z-index: 35;
+  }
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    padding: 0.29rem 0.6rem 0.9rem;
+    background-color: #fff;
+    max-width: 550px;
+    z-index: 40;
+    @include mq('sp') {
+      width: 90%;
+    }
+  }
+  &__heading {
+    font-size: 0.2rem;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 0.295rem;
+    margin: 0;
+    @include mq('sp') {
+      font-size: 0.36rem;
+    }
+  }
+  &__label {
+    display: block;
+    font-weight: 500;
+    margin: 0.14rem 0;
+    &--first {
+      display: block;
+      font-weight: 500;
+      margin: 0.355rem 0 0.14rem;
+    }
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid #E7E7E7;
+    height: 32px;
+    &::placeholder {
+      color: #797878;
+      font-size: 0.14rem;
+      @include mq('sp') {
+        font-size: 0.28rem;
+      }
+    }
+  }
+  &__select {
+    display: block;
+    width: 100%;
+    border: 1px solid #E7E7E7;
+    height: 32px;
+    color: #000;
+    font-size: 0.14rem;
+    cursor: pointer;
+    background-color: #fff;
+    @include mq('sp') {
+      font-size: 0.28rem;
+    }
+  }
+  &__btn {
+    display: block;
+    margin: 0.64rem auto 0;
+    background-color: #fff;
+    width: 198px;
+    height: 42px;
+    line-height: 42px;
+    font-weight: 500;
+    border: 1px solid #707070;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+      opacity: 0.9;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+  }
+  &__close {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.22rem;
+    cursor: pointer;
+  }
+}
+
+/* show modal */
+.is-show { 
+  visibility: visible;
+  opacity : 1;
+}
+
+/* color for first option  */
+.is-empty{
+  color: #797878;
+}

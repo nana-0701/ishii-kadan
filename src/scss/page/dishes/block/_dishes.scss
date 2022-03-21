@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+.dishes {
+  max-width: $inner-width;
+  margin: 0 auto;
+  @include mq('tab') {
+    padding: 0 0.2rem;
+  }
+  &__intro {
+    @extend %room-intro;
+    @include mq('sp') {
+      font-size: 0.28rem;
+      line-height: 1.6;
+      font-weight: normal;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      display: inline-block;
+      text-align: left;
+    }
+    &--br {
+    @include mq('sp') {
+      display: none;
+    }
+    }
+  }
+  &__box {
+    @include room-box(2.49rem);
+    @include mq('sp') {
+      display: block;
+      margin-bottom: 1.8rem;
+    }
+    &:nth-of-type(2) {
+      flex-direction: row-reverse;
+    }
+    &:nth-of-type(3) {
+      @include room-box(2.83rem);
+      @include mq('sp') {
+        display: block;
+        margin-bottom: 1.8rem;
+      }  
+    }
+  }
+  &__pic {
+    @extend %room-pic;
+    @include mq('tab') {
+      width: 53%;
+    }
+    @include mq('sp') {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      height: auto;
+    }
+    img {
+      max-height: 100%;
+    }
+  }
+  &__inner {
+    @include room-inner;
+    @include mq('tab') {
+      margin: 0 0.2rem;
+      width: 40%;
+    }
+    @include mq('sp') {
+      width: 100%;
+      margin: 0;
+    }
+    &::before {
+      @include room-innerBefore {
+        right: 0;
+      }
+      @include mq('tab') {
+        top: 25px;
+        height: 350px;
+      }
+      @include mq('sp') {
+        display: none;
+      }
+    }
+    &--reverse {
+      @include room-inner(0.6rem, 0.9rem);
+      @include mq('tab') {
+        margin: 0 0.2rem;
+        width: 40%;
+      }  
+      @include mq('sp') {
+        width: 100%;
+        margin: 0;
+      }  
+      &::before {
+        @include room-innerBefore {
+          left: 0;
+        }
+        @include mq('tab') {
+          top: 25px;
+          height: 350px;
+        }
+        @include mq('sp') {
+          display: none;
+        }  
+      }
+    }
+  }
+  &__title {
+    font-size: 0.24rem;
+    margin: 1.17rem 0 0.52rem;
+    @include mq('tab') {
+      margin: 0.6rem 0 0.25rem;
+    }
+    @include mq('sp') {
+      font-size: 0.4rem;
+      text-align: center;
+    }
+    br {
+      display: none;
+      @include mq('tab') {
+        display: block;
+      }
+    }
+  }
+  &__text {
+    line-height: 2;
+    @include mq('tab') {
+      line-height: 1.8;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+    @include mq('sp') {
+      font-size: 0.28rem;
+    }
+    &--br {
+      @include mq('tab') {
+        display: none;
+      }
+    }
+  }
+}

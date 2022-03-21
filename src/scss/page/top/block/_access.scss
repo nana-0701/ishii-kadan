@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+.access {
+  background-image: url("../../img/bg.jpg");
+  overflow: hidden;
+  padding: 0 1.38rem 0;  
+  @include mq('tab') {
+    padding: 0 0.2rem;
+  }
+  &__wrapper {
+    max-width: $inner-width;
+    margin: 0 auto;
+  }
+  &__logo {
+    @extend %heading-logo;
+  }
+  &__heading {
+    @extend %heading;
+    margin-bottom: 0.84rem;
+  }
+  &__top {
+    display: flex;
+    @include mq('sp') {
+      display: block;
+    }
+  }
+  &__pic {
+    max-width: 656px;
+    width: 100%;
+    @include mq('tab') {
+      width: 50%;
+    }
+    @include mq('sp') {
+      width: 100%;
+      margin: 0 auto;
+    }
+    img {
+      height: 370px;
+      min-height: 100%;
+    }
+  }
+  &__inner {
+    margin-left: 0.83rem;
+    @include mq('tab') {
+      width: 45%;
+      margin-left: 0.4rem;
+    }
+    @include mq('sp') {
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__def {
+    padding-top: 0.15rem;
+    &--tit {
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
+    &--data {
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+  }
+  &__text {
+    font-weight: 500;
+    margin: 0 -1.38rem 0 0;
+    @include mq('tab') {
+      margin: 0;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+    &--br {
+      @include mq('tab') {
+        display: none;
+      }
+    }
+  }
+  &__bottom {
+    margin: 0 auto;
+  }
+  &__map {
+    max-width: 792px;
+    margin: 0.69rem auto 1.1rem;
+    @include mq('tab') {
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  
+}
